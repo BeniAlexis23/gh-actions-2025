@@ -15,7 +15,7 @@ jobs:
       - run: echo "Publicar version"
 
   second_deploy:
-    needs: 1_deploy-codigofacilito
+    needs: first_deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
