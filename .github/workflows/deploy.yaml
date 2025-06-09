@@ -5,7 +5,7 @@ on:
     branches: ["master"]
 
 jobs:
-  1_deploy_codigofacilito:
+  1_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -14,7 +14,7 @@ jobs:
       - run: echo "Generar Binario"
       - run: echo "Publicar version"
 
-  2_deploy_codigofacilito:
+  2_deploy:
     needs: 1_deploy-codigofacilito
     runs-on: ubuntu-latest
     steps:
